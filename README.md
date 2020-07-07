@@ -1,6 +1,7 @@
 # Jekyll
 
-[Jekyll](https://jekyllrb.com/) is the static site generator I use for https://nicheosala.tk.\
+[Jekyll](https://jekyllrb.com) is the static site generator I use for https://nicheosala.tk.
+
 You may want to build the website locally. In orther to do so:
 1. install Jekyll
 2. clone this repository
