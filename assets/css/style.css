@@ -1,0 +1,232 @@
+/*** Global ***/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 14pt;
+    line-height: 1.5;
+    width: 640px;
+    margin: auto;
+}
+
+a:focus {
+    outline: none; /* Avoid dotted outline in Firefox after clicking links */
+}
+
+a:link {
+    text-decoration: none;
+}
+
+article a:link {
+    text-decoration: underline;
+}
+
+ul {
+    list-style-type: none;
+}
+
+ol {
+    list-style-position: inside;
+}
+
+img {
+    align-self: center;
+    width: 300px;
+    padding-bottom: 10px;
+}
+
+input {
+    all: unset;
+    border: 1px solid;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+button {
+    all: unset;
+    border: 1px solid;
+    text-align: center;
+    padding: 5px 10px;
+}
+
+button::-moz-focus-inner {
+    border: none;   /* Avoid dotted outline in Firefox while clicking buttons */
+}
+
+.title, .subtitle {
+    padding-bottom: 10px;
+}
+
+.caption {
+    text-align: right;
+    font-size: 0.9rem;
+}
+
+/*** Header ***/
+header {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+header .logo {
+    text-align: center; /* Useful for very very strict web pages */
+}
+
+header .info {
+    display: flex;
+    align-items: center;
+}
+
+header .info > ul > li {
+    display: inline;
+    margin-right: 20px;
+}
+
+header .info > ul > li:last-of-type {
+    margin-right: 0;
+}
+
+/*** Main ***/
+main {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+main > ul > li {
+    margin-bottom: 20px;
+}
+
+main > ul > li:last-of-type {
+    margin-bottom: 0;
+}
+
+main .preview {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+main article .introduction {
+    padding-bottom: 20px;
+}
+
+/*** Footer ***/
+footer {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .social {
+    text-align: right;
+}
+
+footer li, footer h4 {
+    padding-bottom: 8px;
+}
+
+/* Mobile Styles */
+@media only screen and (max-width: 640px) {
+
+    body {
+        width: 100%;
+    }
+
+    header {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    header .logo {
+        padding-bottom: 8px; /* For mobile accessibility */
+    }
+
+    main .preview {
+        flex-direction: column;
+    }
+
+    footer {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    footer .donazioni {
+        text-align: center;
+    }
+    
+    footer .social {
+        padding-top: 20px;
+        text-align: center;
+    }
+}
+
+/* Colours */
+@media (prefers-color-scheme: dark) {
+
+    body {
+        background-color: #303030;
+    }
+
+    body, a, p, h1, h2, h3, h4, h5, h6 {
+        color: white;
+    }
+
+    a:hover, button:hover {
+        background-color: black;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+
+    a {  
+        color: #000;
+    }
+
+    a:hover, button:hover {
+        background-color: #d3d3d3;
+    }
+}
+
+main {
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+}
+
+main .preview {
+    border: 1px solid;
+}
+
+input {
+    background-color: white;
+    color: black;
+}
+
+/* Print */
+@media print {
+
+    header .info, footer {
+        display: none; 
+    }
+
+    header {
+        justify-content: center;   
+    }
+
+    body, a, p, h1, h2, h3, h4, h5, h6 {
+        background: none;
+        color: #000;
+        font-size: 1em;
+        font-family: sans-serif; 
+    }
+
+    main, main .preview {
+        border: 0;
+        padding: 5px;
+    }
+  }

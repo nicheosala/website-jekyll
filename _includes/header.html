@@ -1,0 +1,8 @@
+<header>
+    <h1 class="logo"><a href="/">{{ site.title }}</a></h1>
+    <nav class="info">
+        <ul>
+            {% for info in site.pages %}{% if info.categories == "info" %}<li><a href="{{ info.url }}">{{ info.title }}</a></li>{% endif %}{% endfor %}
+        </ul>
+    </nav>
+</header>

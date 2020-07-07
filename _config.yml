@@ -1,0 +1,17 @@
+title: Nicolò Sala
+description: Questo è il mio blog. Racconto le scoperte di tutti i giorni, quelle informatiche in particolare.
+url: https://nicheosala.tk
+permalink: /:title/
+destination: website
+
+defaults:
+    - scope:
+          path: "" # All front matters of the website
+      values:
+          layout: default
+          author: Nicolò Sala
+    - scope:
+          path: ""
+          type: posts
+      values:
+          layout: post

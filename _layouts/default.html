@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <meta content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" name="description" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link href="/assets/css/style.css" rel="stylesheet" />
+
+    <meta name="twitter:card" content="summary">
+    <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
+    <meta property="og:url" content="{{site.url}}{{page.url}}" />
+    <meta property="og:image" content="{{site.url}}/assets/img/avatar.png" />
+</head>
+
+<body>
+{% include header.html %}
+<main>
+{{content}}
+</main>
+{% include footer.html %}
+</body>
+
+</html>

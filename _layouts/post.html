@@ -1,0 +1,11 @@
+---
+layout: default
+---
+<article>
+    <div class="introduction">
+        <h1>{{ page.title }}</h1>
+        <p>{{ page.summary }}</p>
+        <p class="caption">{{page.author}}, {{ page.date | italianDate }}</p>
+    </div>
+    {{content}}
+</article>
